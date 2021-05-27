@@ -97,7 +97,7 @@ WSGI_APPLICATION = 'api_ambiance.wsgi.application'
 DATABASES = {
         'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'ambiance_sqlite.db',
+        'NAME': BASE_DIR / 'ambiance4.db',
        'HOST': '',
        'PORT': '',
        'USER': '',
