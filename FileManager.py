@@ -27,13 +27,19 @@ def run() :
          playsound ("C:/Users/trf_i/OneDrive/Bureau/server/Playlist/musique.mp3")
 music = threading.Thread(target=run)  
 
-premierefois=True
+global premierefois
+
+premierefois=False
+
+
 
 def main():
+    global premierefois
 
     while True :
 
-        if raw_input:
+        question = input("received y/n: ")
+        if question == 'y':
             if(premierefois):
                     premierefois=False
                     os.rename('C:/Users/trf_i/OneDrive/Bureau/server/Playlist/musique_temp.mp3','C:/Users/trf_i/OneDrive/Bureau/server/Playlist/musique.mp3') 
