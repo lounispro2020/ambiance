@@ -41,8 +41,11 @@ if __name__ == '__main__':
                         else:
                                 print("Is thread1 alive:", music.is_alive())
                                 music.terminate()
+                                music.join()
                                 os.remove("C:/Users/trf_i/OneDrive/Bureau/server/Playlist/musique.mp3")
                                 os.rename('C:/Users/trf_i/OneDrive/Bureau/server/Playlist/musique_temp.mp3','C:/Users/trf_i/OneDrive/Bureau/server/Playlist/musique.mp3')
+                                music = multiprocessing.Process(target=run)
+                                music.start()
 
                         
                 
