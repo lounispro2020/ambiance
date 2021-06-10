@@ -46,7 +46,7 @@ void setup()
 void loop(){
   int readig = analogRead(DHTPIN);
  
- delay(600000);
+ delay(5000);
  
 // La lecture du capteur prend 250ms
 // Les valeurs lues peuvet etre vieilles de jusqu'a 2 secondes (le capteur est lent)
@@ -57,7 +57,7 @@ void loop(){
    return;}
 
     
-    String postData = "{\"VALEUR_TEMP\": \"" + String(t) +"\",\"Timestamp\":\"2021-05-28T15:58:34.335788\"}"; 
+    String postData = "{\"VALEUR_TEMP\": \"" + String(t) +"\"}"; 
     if (client.connect(server, 8000)){
     client.println("POST /temp/ HTTP/1.1");
     client.println("Host: 192.168.10.1");
