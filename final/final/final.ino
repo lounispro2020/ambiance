@@ -57,7 +57,7 @@ void loop(){
    return;}
 
     
-    String postData = "{\"VALEUR_TEMP\": \"" + String(t) +"\"}"; 
+    String postData = "{\"temperature\": \"" + String(t) +"\"}"; 
     if (client.connect(server, 8000)){
     client.println("POST /temp/ HTTP/1.1");
     client.println("Host: 192.168.10.1");

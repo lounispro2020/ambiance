@@ -5,6 +5,6 @@ from .models import Temperature
 class TemperatureSerializer(serializers.ModelSerializer):
     class Meta:
         model = Temperature
-        fields = ['temperature','Timestamp']
-        #fields = ['Timestamp']
-   
+        fields = ['temperature','moment']
+    
+        
